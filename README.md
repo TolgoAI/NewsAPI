@@ -8,6 +8,7 @@ This application acquires data (news articles) on the topic of 'war in ukraine' 
 url = "https://newsapi.org/v2/everything?q=ukraine&war&language=en&sortBy=publishedAt&apiKey=YOUR_API_KEY"
 ```
 #### **Setup**
+Open your terminal and run the following commands:
 ```zsh
 git clone git@github.com:TolgoAI/NewsAPI.git
 cd project
