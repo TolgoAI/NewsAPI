@@ -6,18 +6,18 @@ import requests
 # Test for a successful response status
 
 def test_status():
-     response = requests.get("https://newsapi.org/v2/everything?q=ukraine&war&language=en&sortBy=publishedAt&apiKey=ecdde2ae015e42739bd8827a79381a18")
+     response = requests.get("https://newsapi.org/v2/everything?q=ukraine&war&language=en&sortBy=publishedAt&apiKey=YOUR_API_KEY")
      assert response.status_code == 200
 
 #Check if the response content is in json
 
 def test_content_type_equals_json():
-     response = requests.get("https://newsapi.org/v2/everything?q=ukraine&war&language=en&sortBy=publishedAt&apiKey=ecdde2ae015e42739bd8827a79381a18")
+     response = requests.get("https://newsapi.org/v2/everything?q=ukraine&war&language=en&sortBy=publishedAt&apiKey=YOUR_API_KEY")
      assert response.headers["Content-Type"] == "application/json; charset=utf-8"
 
 
 def test_get_author_name():
-     response = requests.get("https://newsapi.org/v2/everything?q=ukraine&war&language=en&sortBy=publishedAt&apiKey=ecdde2ae015e42739bd8827a79381a18")
+     response = requests.get("https://newsapi.org/v2/everything?q=ukraine&war&language=en&sortBy=publishedAt&apiKey=YOUR_API_KEY")
      response_body = response.json()
      assert response_body["articles"][0]["author"] == 'Yves Smith' # after running, this test will throw
      # an error with an assertion suggestion, that needs to be replaced with the correct value to make the test pass
