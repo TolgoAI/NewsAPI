@@ -18,6 +18,8 @@ pip install -r requirements.txt
 ```
 
 #### **Testing an App residing in __ init __.py**
+
+Make sure to provide URLs with your YOUR_API_KEY in test.py
 ```zsh
 pytest test.py
 ```
